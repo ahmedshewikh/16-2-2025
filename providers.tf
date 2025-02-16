@@ -39,11 +39,15 @@ resource "azurerm_resource_group" "rg1" {
   location = "South Central US"
 }
 
-terraform {   
-  backend "local" {     
-    path = "D:\2025 plan\github_repos\16-2-2025\16-2-2025\terraform.tfstate"   
+terraform { 
+  cloud { 
+    organization = "hishamcorp"
+ 
+    workspaces { 
+      name = "16feb" 
     } 
-    }
+  } 
+}
 
 
 #Resources----------------------------------------
