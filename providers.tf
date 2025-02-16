@@ -11,17 +11,15 @@ terraform {
 
 #Must create new workspace on HCP as everytime I start with a new tfstate 
 #or search for how to delete old state if I want to work on the same workspace
-/* terraform { 
+terraform { 
   cloud { 
-    
-    organization = "hishamcorp" 
-
+    organization = "hishamcorp"
+ 
     workspaces { 
-      name = "29janstate" 
+      name = "16feb" 
     } 
   } 
-} 
-*/
+}
 
 provider "azurerm" {
   features {}
@@ -39,15 +37,7 @@ resource "azurerm_resource_group" "rg1" {
   location = "South Central US"
 }
 
-terraform { 
-  cloud { 
-    organization = "hishamcorp"
- 
-    workspaces { 
-      name = "16feb" 
-    } 
-  } 
-}
+
 
 
 #Resources----------------------------------------
